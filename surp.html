@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Swapping</title>
+    </head>
+    <style>
+       
+            body{
+            width: 100%;
+            height: 100%;
+            background: no-repeat;
+            background-image: url(a1.jpeg);
+            overflow: hidden;
+            position: relative;
+            background-position: center;
+            background-repeat:no-reapeat;
+            background-size:cover;
+            animation: change 10s infinite ease-in-out;         
+            }
+        p,h1{
+            font-weight: 100;
+            font-size: 25px;
+            color:#ff00ff;
+        }
+        @keyframes change
+        {
+            0%{
+                background-image: url(a1.jpeg);
+            }
+            50%{
+                background-image: url(a2.jpeg);
+            }
+            100%{
+                background-image: url(a3.jpeg);
+            }
+
+        }
+    </style>
+    <body>
+       <div class='img'>
+         <center><h1> Swapping Enterprises</h1>
+        <hr>
+        <p id="f">
+        
+        </p>
+        <p id="s">
+            
+        </p>
+        <p id="t">
+            
+        </p>
+        <p id="c">
+            
+        </p>
+        <p id="h">
+            
+        </p>
+       
+
+    
+        <button onclick=getdd() id="helo">click it </button>
+
+    </center>
+</div>
+        <script>
+           
+            var b=document.getElementById('helo');
+            var z=document.getElementById('helo1');
+var arr=['tea','cofee','milk','Apple Juice','coco cola'];
+b.onclick=function()
+{
+arr.unshift(arr.pop());
+ document.getElementById('f').innerHTML =arr[0];
+    document.getElementById('s').innerHTML =arr[1] ;
+    document.getElementById('t').innerHTML =arr[2];
+    document.getElementById('c').innerHTML =arr[3];
+    document.getElementById('h').innerHTML =arr[4];
+    
+    
+}
+
+            
+           
+        </script>
+
+    </body>
+</html>
